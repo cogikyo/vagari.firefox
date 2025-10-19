@@ -1,10 +1,13 @@
 /* ⚰️  cull annoying things ⚰️ */
 .search-one-offs,
-#urlbar-search-mode-indicator-close {
+#urlbar-search-mode-indicator-close,
+#urlbar-searchmode-switcher {
   display: none !important;
 }
 
-
+#urlbar-input {
+  margin-left: 1rem !important;
+}
 
 #urlbar[breakout][breakout-extend] > #urlbar-input-container {
   height: var(--urlbar-height) !important;
@@ -70,6 +73,11 @@
   border-radius: 8px !important;
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25) !important;
   transition: color var(--snap) !important;
+}
+
+.urlbar-background {
+  background-color: var(--drk-1) !important;
+  border: 1px inset var(--slt-1) !important;
 }
 
 #urlbar[open="true"] #urlbar-background {
