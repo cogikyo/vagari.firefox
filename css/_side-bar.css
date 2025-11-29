@@ -5,6 +5,13 @@
   display: none !important;
 }
 
+#sidebar {
+  background-color: var(--drk-1) !important;  
+  border-top: 1px solid var(--drk-1) !important;
+  padding-top: 6px !important;
+  scrollbar-width: none !important;
+}
+
 [lwt-sidebar] {
   padding-top: 6px !important;
   background-color: var(--drk-0) !important;
@@ -14,6 +21,7 @@
 #sidebar-splitter {
   border: none !important;
   width: 3px !important;
+  border-left: 1px solid var(--slt-0) !important;
   background: var(--bg) !important;
   transition: background var(--snap) !important;
 }
@@ -25,3 +33,45 @@
 .hidevscroll-scrollbar {
   display: none !important;
 }
+
+.sidebar-placesTree {
+  color: var(--blu-4) !important;
+}
+
+.sidebar-placesTree treecolpicker:hover {
+  color: var(--orn-4) !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text(hover),
+.sidebar-placesTreechildren::-moz-tree-cell-text(selected) {
+  color: var(--orn-4) !important;
+  font-weight: 600 !important;
+  border: none !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-row(hover) {
+  background-color: var(--glc-0) !important;
+}
+
+
+.sidebar-placesTreechildren::-moz-tree-row(selected) {
+  background-color: var(--drk-1) !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Folder icons → orange when hovered or selected */
+.sidebar-placesTreechildren::-moz-tree-image(container, selected),
+.sidebar-placesTreechildren::-moz-tree-image(container, hover) {
+  fill: var(--orn-4) !important;
+  stroke: none !important;
+}
+
+/* Make the folder twisties (chevrons) also orange on hover & selected */
+.sidebar-placesTreechildren::-moz-tree-twisty(container, open, hover),
+.sidebar-placesTreechildren::-moz-tree-twisty(container, open, selected),
+.sidebar-placesTreechildren::-moz-tree-twisty(container, hover),
+.sidebar-placesTreechildren::-moz-tree-twisty(container, selected) {
+    fill: var(--orn-4) !important;
+}
+

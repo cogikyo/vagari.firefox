@@ -30,3 +30,20 @@
 #navigator-toolbox {
   border-bottom: 0 !important;
 }
+
+
+/* Extra rules that catch everything in most cases */
+#TabsToolbar,
+#navigator-toolbox,
+#titlebar,
+toolbar {
+    background-color: var(--bg) !important;
+    background: var(--bg) !important;
+}
+
+#navigator-toolbox:window-inactive,
+#TabsToolbar:window-inactive,
+toolbar:window-inactive {
+    background-color: inherit !important;
+    background: inherit !important;
+}

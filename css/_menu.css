@@ -6,7 +6,7 @@
 #toolbar-menubar {
   background: var(--bg) !important;
   color: var(--fg) !important;
-  transition: all var(--snap) !important;
+  transition: all ease-in-out !important;
 }
 
 #toolbar-menubar:not([inactive="true"]) {
@@ -16,7 +16,7 @@
 #main-menubar > menu[_moz-menuactive="true"],
 #main-menubar > menu:hover {
   background: var(--bg) !important;
-  color: var(--orn-3) !important;
+  color: var(--blu-3) !important;
   font-weight: 600 !important;
   transition: color var(--snap), font-weight var(--snap) !important;
 }
@@ -56,4 +56,5 @@ panelview {
 
 panelview toolbarbutton:hover {
   color: var(--orn-4) !important;
+  background-color: var(--glc-1) !important;
 }

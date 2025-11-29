@@ -22,6 +22,8 @@
 #tabbrowser-tabs .tabbrowser-tab:not(only-of-type) {
   transition: all var(--snap) !important;
   margin: 0 !important;
+  margin-top: 5px !important;
+  margin-bottom: -5px !important;
 }
 
 #tabs-newtab-button {
@@ -59,24 +61,24 @@
   border-radius: 6px !important;
   margin: 6px 3px !important;
   color: var(--blu-4) !important;
-  transition: all var(--snap) !important;
+  transition: all ease-in-out !important;
 }
 
 .tabbrowser-tab .tab-stack {
   color: var(--blu-2) !important;
-  transition: color var(--snap) !important;
+  transition: color ease-out !important;
 }
 
 .tabbrowser-tab[selected] .tab-background {
   background: var(--glc-1) !important;
   border-color: var(--orn-4) !important;
   box-shadow: 0 0 3px -1px var(--rby-0) !important;
-  transition: all var(--snap) !important;
+  transition: all ease-out !important;
 }
 
 .tabbrowser-tab[selected] .tab-stack {
   color: var(--blu-4) !important;
-  transition: color var(--snap) !important;
+  transition: color ease-out !important;
   font-weight: 500;
 }
 
@@ -84,7 +86,7 @@
   background: var(--rst-025) !important;
   border-color: var(--orn-3) !important;
   box-shadow: 0 0 4px -2px var(--rby-0) !important;
-  transition: all var(--snap) !important;
+  transition: all ease-out !important;
 }
 
 .tabbrowser-tab:hover .tab-stack {

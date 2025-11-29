@@ -20,6 +20,7 @@
 #nav-bar {
   background-color: var(--bg) !important;
   box-shadow: none !important;
+  padding-top: 1px !important;
 }
 
 .toolbarbutton-1,
