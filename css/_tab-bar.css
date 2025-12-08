@@ -19,11 +19,12 @@
 }
 
 /* Smooth appearance when new tab is added - [110] */
-#tabbrowser-tabs .tabbrowser-tab:not(only-of-type) {
+#tabbrowser-tabs .tabbrowser-tab:not(:only-of-type) {
   transition: all var(--snap) !important;
   margin: 0 !important;
   margin-top: 5px !important;
   margin-bottom: -5px !important;
+  flex: 0 0 auto !important;
 }
 
 #tabs-newtab-button {
@@ -41,6 +42,7 @@
   padding: 0 3px !important;
   margin-top: -2px !important;
   margin-bottom: 2px !important;
+  justify-content: flex-start !important;
 }
 
 #tabbrowser-tabs {
@@ -86,11 +88,40 @@
   background: var(--rst-025) !important;
   border-color: var(--orn-3) !important;
   box-shadow: 0 0 4px -2px var(--rby-0) !important;
-  transition: all ease-out !important;
+  transition: color ease-out !important;
 }
 
 .tabbrowser-tab:hover .tab-stack {
   color: var(--orn-4) !important;
   font-weight: 600;
   transition: color var(--snap) !important;
+}
+
+.tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) {
+  flex: 0 0 auto !important;
+}
+
+.tabbrowser-tab:is([label="New Tab"], [label^="localhost:42069"]) .tab-content {
+  color: var(--glc-0) !important;
+  max-width: 50px !important;
+  min-width: 50px !important;
+}
+
+.tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-content {
+  padding: 0 !important;
+  margin-left: 28px !important;
+  justify-content: center !important;
+}
+
+.tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-icon-stack {
+  display: none !important;
+}
+
+.tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-label-container {
+  flex: 0 0 auto !important;
+  align-items: center !important;
+}
+
+.tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-label {
+  text-align: center !important;
 }
