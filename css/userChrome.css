@@ -10,15 +10,15 @@
   --focus-outline-color: var(--orn-3) !important;
 }
 
-/* change bars order */
-#titlebar {
-  order: 3 !important;
+/* change bars order - tabs below nav bar */
+#toolbar-menubar {
+  order: 1 !important;
 }
 #nav-bar {
   order: 2 !important;
 }
-#toolbar-menubar {
-  order: 1 !important;
+#TabsToolbar {
+  order: 3 !important;
 }
 
 /* hide bookmarks bar, literally always */
@@ -28,22 +28,23 @@
 
 /* remove small border on bottom of toolbox */
 #navigator-toolbox {
+  display: flex !important;
+  flex-direction: column !important;
   border-bottom: 0 !important;
 }
-
 
 /* Extra rules that catch everything in most cases */
 #TabsToolbar,
 #navigator-toolbox,
 #titlebar,
 toolbar {
-    background-color: var(--bg) !important;
-    background: var(--bg) !important;
+  background-color: var(--bg) !important;
+  background: var(--bg) !important;
 }
 
 #navigator-toolbox:window-inactive,
 #TabsToolbar:window-inactive,
 toolbar:window-inactive {
-    background-color: inherit !important;
-    background: inherit !important;
+  background-color: inherit !important;
+  background: inherit !important;
 }
