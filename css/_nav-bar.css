@@ -17,10 +17,33 @@
   transition: padding var(--snap) !important;
 }
 
+/* Auto-hide nav bar  */
 #nav-bar {
-  background-color: var(--bg) !important;
   box-shadow: none !important;
-  padding-top: 1px !important;
+  margin-top: -40px;
+  opacity: 0;
+  z-index: -100;
+  transition: all var(--snap) !important;
+  transition-delay: 2s !important;
+}
+
+#navigator-toolbox:focus-within > #nav-bar {
+  transition: none !important;
+}
+
+#navigator-toolbox:hover > #nav-bar,
+#navigator-toolbox:focus-within > #nav-bar {
+  margin-top: 4px;
+  margin-bottom: 2px;
+  opacity: 1;
+  z-index: 100;
+  transition-delay: 0.75s !important;
+}
+
+/* Adjust margin when multiple tabs are open */
+#navigator-toolbox:has(.tabbrowser-tab:not(:only-of-type)):hover > #nav-bar,
+#navigator-toolbox:has(.tabbrowser-tab:not(:only-of-type)):focus-within > #nav-bar {
+  margin-bottom: -4px;
 }
 
 .toolbarbutton-1,

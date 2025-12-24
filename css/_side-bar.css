@@ -6,8 +6,7 @@
 }
 
 #sidebar {
-  background-color: var(--drk-1) !important;  
-  border-top: 1px solid var(--drk-1) !important;
+  background-color: var(--bg) !important;
   padding-top: 6px !important;
   scrollbar-width: none !important;
 }
@@ -20,8 +19,8 @@
 
 #sidebar-splitter {
   border: none !important;
-  width: 3px !important;
-  border-left: 1px solid var(--slt-0) !important;
+  width: 4px !important;
+  border-right: 1px solid var(--slt-0) !important;
   background: var(--bg) !important;
   transition: background var(--snap) !important;
 }
@@ -53,7 +52,6 @@
   background-color: var(--glc-0) !important;
 }
 
-
 .sidebar-placesTreechildren::-moz-tree-row(selected) {
   background-color: var(--drk-1) !important;
   border: none !important;
@@ -72,6 +70,5 @@
 .sidebar-placesTreechildren::-moz-tree-twisty(container, open, selected),
 .sidebar-placesTreechildren::-moz-tree-twisty(container, hover),
 .sidebar-placesTreechildren::-moz-tree-twisty(container, selected) {
-    fill: var(--orn-4) !important;
+  fill: var(--orn-4) !important;
 }
-
