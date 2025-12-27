@@ -12,9 +12,9 @@
 
 /* --- Hide Tab bar with only one Tab - [110] --- */
 #tabbrowser-tabs .tabbrowser-tab:only-of-type {
-  transition: all var(--snap) !important;
+  transition: all var(--ease) !important;
   opacity: 0 !important;
-  margin-top: -44px !important;
+  margin-top: -38px !important;
   margin-left: -150px !important; /* large value creates a bounce effect when reappearing */
 }
 
@@ -22,7 +22,7 @@
 #tabbrowser-tabs .tabbrowser-tab:not(:only-of-type) {
   margin-top: 2px !important;
   margin-bottom: 1px !important;
-  transition: all var(--snap) !important;
+  transition: all var(--ease) !important;
   flex: 0 0 auto !important;
 }
 
@@ -60,7 +60,7 @@
   border-radius: 6px !important;
   margin: 6px 3px !important;
   color: var(--blu-4) !important;
-  transition: all ease-in-out !important;
+  transition: all var(--ease) !important;
 }
 
 .tabbrowser-tab .tab-stack {
@@ -91,7 +91,7 @@
 .tabbrowser-tab:hover .tab-stack {
   color: var(--orn-4) !important;
   font-weight: 600;
-  transition: color var(--snap) !important;
+  transition: color var(--ease) !important;
 }
 
 .tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) {

@@ -14,7 +14,7 @@
   padding-inline: 0 !important;
   padding-block: 0 !important;
   padding-left: 6px !important;
-  transition: padding var(--snap) !important;
+  transition: padding var(--ease) !important;
 }
 
 /* Auto-hide nav bar  */
@@ -23,8 +23,7 @@
   margin-top: -40px;
   opacity: 0;
   z-index: -100;
-  transition: all var(--snap) !important;
-  transition-delay: 2s !important;
+  transition: margin-top var(--ease) 2s, opacity var(--ease) 1.8s !important;
 }
 
 #navigator-toolbox:focus-within > #nav-bar {
@@ -41,8 +40,9 @@
 #urlbar-container,
 #urlbar {
   opacity: 0 !important;
-  transition: opacity var(--snap) !important;
-  transition-delay: 2s !important;
+  z-index: -100 !important;
+  transition: opacity var(--ease) !important;
+  transition-delay: 1.8s !important;
 }
 
 #navigator-toolbox:focus-within #urlbar-container,
@@ -62,7 +62,7 @@
 #star-button,
 .urlbar-icon {
   fill: var(--blu-4) !important;
-  transition: all var(--snap) !important;
+  transition: all var(--ease) !important;
 }
 
 .toolbarbutton-1[disabled] {
@@ -108,7 +108,7 @@
   border: 1px inset var(--slt-1) !important;
   border-radius: 8px !important;
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25) !important;
-  transition: color var(--snap) !important;
+  transition: color var(--ease) !important;
 }
 
 .urlbar-background {
@@ -148,7 +148,7 @@
 #star-button:hover,
 .urlbarView-type-icon {
   fill: var(--sun-2) !important;
-  transition: all var(--snap) !important;
+  transition: all var(--ease) !important;
 }
 
 #star-button-box:hover {
@@ -160,12 +160,12 @@
   color: var(--blu-4) !important;
   margin-bottom: 4px !important;
   margin-right: 2px !important;
-  transition: all var(--snap) !important;
+  transition: all var(--ease) !important;
 }
 
 #urlbar-zoom-button:hover {
   color: var(--orn-4) !important;
-  transition: all var(--snap) !important;
+  transition: all var(--ease) !important;
   font-weight: 600 !important;
   font-size: 1.1em !important;
   margin-bottom: 4px !important;
@@ -177,13 +177,13 @@
   fill: var(--slt-3) !important;
   background: none !important;
   margin-right: -5px !important;
-  transition: all var(--snap) !important;
+  transition: all var(--ease) !important;
 }
 
 #tracking-protection-icon:hover,
 .identity-box-button:hover {
   fill: var(--orn-4) !important;
-  transition: all var(--snap) !important;
+  transition: all var(--ease) !important;
 }
 
 #identity-box {

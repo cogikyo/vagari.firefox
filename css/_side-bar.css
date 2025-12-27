@@ -22,7 +22,7 @@
   width: 4px !important;
   border-right: 1px solid var(--slt-0) !important;
   background: var(--bg) !important;
-  transition: background var(--snap) !important;
+  transition: background var(--ease) !important;
 }
 
 #sidebar-splitter:hover {

@@ -6,7 +6,7 @@
 #toolbar-menubar {
   background: var(--bg) !important;
   color: var(--fg) !important;
-  transition: all ease-in-out !important;
+  transition: all var(--ease) !important;
 }
 
 #toolbar-menubar:not([inactive="true"]) {
@@ -18,7 +18,7 @@
   background: var(--bg) !important;
   color: var(--blu-3) !important;
   font-weight: 600 !important;
-  transition: color var(--snap), font-weight var(--snap) !important;
+  transition: color var(--ease), font-weight var(--ease) !important;
 }
 
 menupopup,
@@ -40,7 +40,7 @@ menuitem:hover,
 menuitem[_moz-menuactive] {
   background: var(--glc-2) !important;
   color: var(--orn-4) !important;
-  transition: color var(--snap) !important;
+  transition: color var(--ease) !important;
 }
 
 menu[disabled="true"] {
