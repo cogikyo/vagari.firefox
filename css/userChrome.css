@@ -12,13 +12,13 @@
 
 /* change bars order - tabs below nav bar */
 #toolbar-menubar {
-  order: 1 !important;
+  order: 3 !important;
 }
 #nav-bar {
   order: 2 !important;
 }
 #TabsToolbar {
-  order: 3 !important;
+  order: 1 !important;
 }
 
 /* hide bookmarks bar, literally always */
