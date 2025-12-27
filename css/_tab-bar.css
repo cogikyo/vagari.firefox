@@ -14,14 +14,14 @@
 #tabbrowser-tabs .tabbrowser-tab:only-of-type {
   transition: all var(--ease) !important;
   opacity: 0 !important;
-  margin-top: -38px !important;
+  margin-top: -40px !important;
   margin-left: -150px !important; /* large value creates a bounce effect when reappearing */
 }
 
 /* Smooth appearance when new tab is added - [110] */
 #tabbrowser-tabs .tabbrowser-tab:not(:only-of-type) {
   margin-top: 2px !important;
-  margin-bottom: 1px !important;
+  margin-bottom: -5px !important;
   transition: all var(--ease) !important;
   flex: 0 0 auto !important;
 }
@@ -101,7 +101,6 @@
 .tabbrowser-tab:is([label="New Tab"], [label^="localhost:42069"]) .tab-content {
   color: var(--glc-0) !important;
   max-width: 50px !important;
-  min-width: 50px !important;
 }
 
 .tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-content {

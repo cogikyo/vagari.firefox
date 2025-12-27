@@ -10,7 +10,8 @@
 }
 
 #toolbar-menubar:not([inactive="true"]) {
-  height: 32px !important; /* Set your desired height */
+  height: 20px !important;
+  margin-bottom: -12px !important;
 }
 
 #main-menubar > menu[_moz-menuactive="true"],

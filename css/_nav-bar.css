@@ -5,6 +5,49 @@
   display: none !important;
 }
 
+/* Auto-hide nav bar  */
+/* #nav-bar {
+  box-shadow: none !important;
+  margin-top: -40px;
+  opacity: 0;
+  z-index: -100;
+  transition: margin var(--ease) 3s, opacity var(--ease) 2.8s !important;
+}
+
+#navigator-toolbox:focus-within > #nav-bar {
+  transition: none !important;
+}
+
+#navigator-toolbox:hover > #nav-bar,
+#navigator-toolbox:focus-within > #nav-bar {
+  margin-top: -4px;
+  margin-bottom: 3px;
+  opacity: 1;
+  transition: none !important;
+}
+
+#navigator-toolbox:focus-within #urlbar-container,
+#navigator-toolbox:focus-within #urlbar {
+  transition: none !important;
+}
+
+#urlbar-container,
+#urlbar {
+  opacity: 0 !important;
+  z-index: -100 !important;
+  transition: opacity var(--ease) !important;
+  transition-delay: 2.8s !important;
+}
+
+#navigator-toolbox:hover #urlbar-container,
+#navigator-toolbox:hover #urlbar,
+#navigator-toolbox:focus-within #urlbar-container,
+#navigator-toolbox:focus-within #urlbar {
+  opacity: 1 !important;
+  transition: margin none !important;
+  transition: opacity var(--ease) 100ms !important;
+} */
+
 #urlbar-input {
   margin-left: 1rem !important;
 }
@@ -15,47 +58,6 @@
   padding-block: 0 !important;
   padding-left: 6px !important;
   transition: padding var(--ease) !important;
-}
-
-/* Auto-hide nav bar  */
-#nav-bar {
-  box-shadow: none !important;
-  margin-top: -40px;
-  opacity: 0;
-  z-index: -100;
-  transition: margin-top var(--ease) 2s, opacity var(--ease) 1.8s !important;
-}
-
-#navigator-toolbox:focus-within > #nav-bar {
-  transition: none !important;
-}
-
-#navigator-toolbox:hover > #nav-bar,
-#navigator-toolbox:focus-within > #nav-bar {
-  margin-top: -4px;
-  opacity: 1;
-  transition-delay: 0.75s !important;
-}
-
-#urlbar-container,
-#urlbar {
-  opacity: 0 !important;
-  z-index: -100 !important;
-  transition: opacity var(--ease) !important;
-  transition-delay: 1.8s !important;
-}
-
-#navigator-toolbox:focus-within #urlbar-container,
-#navigator-toolbox:focus-within #urlbar {
-  transition: none !important;
-}
-
-#navigator-toolbox:hover #urlbar-container,
-#navigator-toolbox:hover #urlbar,
-#navigator-toolbox:focus-within #urlbar-container,
-#navigator-toolbox:focus-within #urlbar {
-  opacity: 1 !important;
-  transition-delay: 0.75s !important;
 }
 
 .toolbarbutton-1,
