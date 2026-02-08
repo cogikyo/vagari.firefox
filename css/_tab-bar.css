@@ -23,7 +23,6 @@
   margin-top: 2px !important;
   margin-bottom: -5px !important;
   transition: all var(--ease) !important;
-  flex: 0 0 auto !important;
 }
 
 #tabs-newtab-button {
@@ -94,30 +93,31 @@
   transition: color var(--ease) !important;
 }
 
-.tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) {
-  flex: 0 0 auto !important;
-}
+/* .tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) { */
+/*   flex: 0 0 auto !important; */
+/* } */
+/**/
+/* .tabbrowser-tab:is([label="New Tab"], [label^="localhost:42069"]) .tab-content { */
+/*   color: var(--glc-0) !important; */
+/*   max-width: 50px !important; */
+/* } */
+/**/
+/* .tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-content { */
+/*   padding: 0 !important; */
+/*   margin-left: 28px !important; */
+/*   justify-content: center !important; */
+/* } */
+/**/
+/* .tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-icon-stack { */
+/*   display: none !important; */
+/* } */
+/**/
+/* .tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-label-container { */
+/*   flex: 0 0 auto !important; */
+/*   align-items: center !important; */
+/* } */
 
-.tabbrowser-tab:is([label="New Tab"], [label^="localhost:42069"]) .tab-content {
-  color: var(--glc-0) !important;
-  max-width: 50px !important;
-}
-
-.tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-content {
-  padding: 0 !important;
-  margin-left: 28px !important;
-  justify-content: center !important;
-}
-
-.tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-icon-stack {
-  display: none !important;
-}
-
-.tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-label-container {
-  flex: 0 0 auto !important;
-  align-items: center !important;
-}
-
-.tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) .tab-label {
-  text-align: center !important;
-}
+/* .tabbrowser-tab:is([label="㋦"], [label="New Tab"], [label^="localhost:42069"]) */
+/*   .tab-label { */
+/*   text-align: center !important; */
+/* } */
