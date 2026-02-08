@@ -2,12 +2,17 @@
 @import "_dev-tools.css";
 
 @-moz-document url-prefix(about:) {
+  * {
+    background-color: transparent !important;
+  }
+
   html,
   body {
     background-color: var(--bg) !important;
+    color: var(--fg) !important;
   }
 
-  /* search bar int about:preferences */
+  /* search bar in about:preferences */
   .sticky-container {
     background-color: var(--bg) !important;
     margin-bottom: 20px !important;
