@@ -48,20 +48,42 @@
    Tab bar background
    ============================================= */
 #tabbrowser-tabs,
-#tabbrowser-arrowscrollbox {
+#tabbrowser-arrowscrollbox,
+#pinned-tabs-container {
   background: var(--bg) !important;
 }
 
 /* =============================================
-   Horizontal tabs — thinner height
+   Horizontal tabs — thinner height + gap
    ============================================= */
+#TabsToolbar {
+  margin-bottom: -14px !important;
+  margin-top: 5px !important;
+}
+
 #tabbrowser-tabs[orient="horizontal"] {
-  --tab-min-height: 26px !important;
-  --tab-block-margin: 1px !important;
+  --tab-min-height: 28px !important;
+  --tab-block-margin: 0px !important;
 }
 
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {
+  min-height: 28px !important;
+  max-height: 28px !important;
   padding-block: 0px !important;
+  margin-inline: 2px !important;
+}
+
+#tabbrowser-tabs[orient="horizontal"] .tab-background {
+  min-height: unset !important;
+}
+
+#tabbrowser-tabs[orient="horizontal"] .tab-content {
+  padding-block: 0 !important;
+}
+
+#tabbrowser-tabs[orient="horizontal"] #tabbrowser-arrowscrollbox,
+#tabbrowser-tabs[orient="horizontal"] #pinned-tabs-container {
+  padding-block: 2px !important;
 }
 
 /* =============================================

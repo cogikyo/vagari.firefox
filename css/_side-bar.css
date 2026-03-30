@@ -47,9 +47,7 @@
    Sidebar — bottom buttons bar (settings, extensions)
    ================================================================= */
 .buttons-wrapper {
-  background: var(--bg) !important;
-  border: none !important;
-  color: var(--blu-2) !important;
+  display: none !important;
 }
 
 /* =================================================================
