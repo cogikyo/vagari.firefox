@@ -53,6 +53,18 @@
 }
 
 /* =============================================
+   Horizontal tabs — thinner height
+   ============================================= */
+#tabbrowser-tabs[orient="horizontal"] {
+  --tab-min-height: 26px !important;
+  --tab-block-margin: 1px !important;
+}
+
+#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {
+  padding-block: 0px !important;
+}
+
+/* =============================================
    Tab appearance — default, selected, hover
    ============================================= */
 
@@ -157,4 +169,3 @@ tab-group[color="grey"] {
   --tab-group-color-invert: #222536 !important;
   --tab-group-color-pale: #7b7fb0 !important; /* slt-5 */
 }
-

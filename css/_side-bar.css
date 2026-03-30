@@ -11,6 +11,17 @@
   scrollbar-width: none !important;
 }
 
+#sidebar,
+#sidebar-box {
+  background-color: var(--bg) !important;
+  padding-top: 6px !important;
+  scrollbar-width: none !important;
+  border-radius: 0 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 [lwt-sidebar] {
   padding-top: 6px !important;
   background-color: var(--drk-0) !important;
