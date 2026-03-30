@@ -1,6 +1,13 @@
+/* =================================================================
+   userContent.css — styles for about: pages and content
+   ================================================================= */
+
 @import "_vars.css";
 @import "_dev-tools.css";
 
+/* =================================================================
+   about: pages — apply vagari background
+   ================================================================= */
 @-moz-document url-prefix(about:) {
   * {
     background-color: transparent !important;
@@ -23,7 +30,9 @@
   }
 }
 
-/* ⚰️  cull scrollbar ⚰️ */
+/* =================================================================
+   Global — hide scrollbars
+   ================================================================= */
 *:not(select) {
   scrollbar-width: none !important;
 }

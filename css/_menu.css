@@ -1,8 +1,13 @@
-/* ⚰️  cull annoying things ⚰️ */
+/* =================================================================
+   Menu — hidden elements
+   ================================================================= */
 #context-navigation {
   display: none !important;
 }
 
+/* =================================================================
+   Menu bar
+   ================================================================= */
 #toolbar-menubar {
   background: var(--bg) !important;
   color: var(--fg) !important;
@@ -22,6 +27,9 @@
   transition: color var(--ease), font-weight var(--ease) !important;
 }
 
+/* =================================================================
+   Popups and panels — global theme colors
+   ================================================================= */
 menupopup,
 panel {
   --panel-color: var(--fg) !important;
@@ -31,6 +39,13 @@ panel {
   --button-bgcolor: var(--bg) !important;
 }
 
+panelview {
+  background: var(--bg) !important;
+}
+
+/* =================================================================
+   Menu items — hover and active states
+   ================================================================= */
 sidebarMenu-popup toolbarbutton:hover,
 panel treechildren::-moz-tree-row(selected),
 panel button:hover,
@@ -44,18 +59,13 @@ menuitem[_moz-menuactive] {
   transition: color var(--ease) !important;
 }
 
-menu[disabled="true"] {
-  color: var(--glc-3) !important;
-}
-menuitem[disabled="true"] {
-  color: var(--glc-3) !important;
-}
-
-panelview {
-  background: var(--bg) !important;
-}
-
 panelview toolbarbutton:hover {
   color: var(--orn-4) !important;
   background-color: var(--glc-1) !important;
+}
+
+/* disabled menu items */
+menu[disabled="true"],
+menuitem[disabled="true"] {
+  color: var(--glc-3) !important;
 }

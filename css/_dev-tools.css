@@ -1,13 +1,10 @@
-/*
-adopted from:
-
-    https://github.com/eduardhojbota/moonlight-userChrome
-
-little changes were made; more work could be done here.
-*/
+/* =================================================================
+   DevTools — vagari color overrides
+   Adapted from: https://github.com/eduardhojbota/moonlight-userChrome
+   ================================================================= */
 
 :root.theme-dark {
-  /* Chrome colors */
+  /* --- chrome --- */
   --theme-tab-toolbar-background: var(--bg) !important;
   --theme-toolbar-background: var(--bg) !important;
   --theme-toolbar-hover: var(--bg) !important;
@@ -16,7 +13,7 @@ little changes were made; more work could be done here.
   --theme-splitter-color: var(--drk-2) !important;
   --theme-comment: var(--slt-2) !important;
 
-  /* Content Colors */
+  /* --- content --- */
   --theme-body-background: var(--bg) !important;
   --theme-sidebar-background: var(--drk-0) !important;
   --theme-contrast-background: var(--drk-0) !important;
@@ -25,14 +22,14 @@ little changes were made; more work could be done here.
   --rule-healder-background-color: var(--bg) !important;
   --devtools-splitter-color: var(--orn-3) !important;
 
-  /* Text Colors */
+  /* --- text --- */
   --theme-body-color: var(--fg) !important;
   --theme-body-color-alt: var(--blu-4) !important;
   --theme-content-color1: var(--orn-4) !important;
   --theme-content-color2: var(--prp-4) !important;
   --theme-content-color3: var(--sky-4) !important;
 
-  /* Highlight Colors */
+  /* --- syntax highlighting --- */
   --theme-highlight-blue: var(--blu-3) !important;
   --theme-highlight-purple: var(--prp-3) !important;
   --theme-highlight-pink: var(--pnk-3) !important;

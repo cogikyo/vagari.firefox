@@ -1,16 +1,15 @@
-/* ⚰️  cull annoying things ⚰️ */
+/* =================================================================
+   Sidebar — hidden elements
+   ================================================================= */
 #sidebar-close,
 #sidebar-header,
 #sidebar-search-container {
   display: none !important;
 }
 
-#sidebar {
-  background-color: var(--bg) !important;
-  padding-top: 6px !important;
-  scrollbar-width: none !important;
-}
-
+/* =================================================================
+   Sidebar — container styling
+   ================================================================= */
 #sidebar,
 #sidebar-box {
   background-color: var(--bg) !important;
@@ -22,12 +21,16 @@
   box-shadow: none !important;
 }
 
+/* lightweight theme sidebar override */
 [lwt-sidebar] {
   padding-top: 6px !important;
   background-color: var(--drk-0) !important;
   color: var(--fg) !important;
 }
 
+/* =================================================================
+   Sidebar — splitter (between sidebar and content)
+   ================================================================= */
 #sidebar-splitter {
   border: none !important;
   width: 4px !important;
@@ -40,6 +43,18 @@
   background: var(--rst-5) !important;
 }
 
+/* =================================================================
+   Sidebar — bottom buttons bar (settings, extensions)
+   ================================================================= */
+.buttons-wrapper {
+  background: var(--bg) !important;
+  border: none !important;
+  color: var(--blu-2) !important;
+}
+
+/* =================================================================
+   Sidebar — bookmarks tree
+   ================================================================= */
 .hidevscroll-scrollbar {
   display: none !important;
 }
@@ -52,6 +67,7 @@
   color: var(--orn-4) !important;
 }
 
+/* text — hover and selected */
 .sidebar-placesTreechildren::-moz-tree-cell-text(hover),
 .sidebar-placesTreechildren::-moz-tree-cell-text(selected) {
   color: var(--orn-4) !important;
@@ -59,6 +75,7 @@
   border: none !important;
 }
 
+/* row backgrounds */
 .sidebar-placesTreechildren::-moz-tree-row(hover) {
   background-color: var(--glc-0) !important;
 }
@@ -69,25 +86,17 @@
   outline: none !important;
 }
 
-/* Folder icons → orange when hovered or selected */
+/* folder icons — orange on hover/selected */
 .sidebar-placesTreechildren::-moz-tree-image(container, selected),
 .sidebar-placesTreechildren::-moz-tree-image(container, hover) {
   fill: var(--orn-4) !important;
   stroke: none !important;
 }
 
-/* Make the folder twisties (chevrons) also orange on hover & selected */
+/* folder twisties (chevrons) — orange on hover/selected */
 .sidebar-placesTreechildren::-moz-tree-twisty(container, open, hover),
 .sidebar-placesTreechildren::-moz-tree-twisty(container, open, selected),
 .sidebar-placesTreechildren::-moz-tree-twisty(container, hover),
 .sidebar-placesTreechildren::-moz-tree-twisty(container, selected) {
   fill: var(--orn-4) !important;
 }
-
-/* sidebar bottom buttons bar */
-.buttons-wrapper {
-  background: var(--bg) !important;
-  border: none !important;
-  color: var(--blu-2) !important;
-}
-

@@ -1,3 +1,10 @@
+/* =================================================================
+   userChrome.css — vagari firefox theme
+   https://github.com/nosvagor/vagari
+
+   Import order matters: _vars.css must be first.
+   ================================================================= */
+
 @import "_vars.css";
 @import "_menu.css";
 @import "_side-bar.css";
@@ -5,6 +12,9 @@
 @import "_nav-bar.css";
 @import "_tab-bar.css";
 
+/* =================================================================
+   Global — disable focus outlines
+   ================================================================= */
 :root {
   --focus-outline: none !important;
   --focus-outline-color: transparent !important;
@@ -13,30 +23,38 @@
   --focus-outline-inset: 0 !important;
 }
 
-/* change bars order - tabs below nav bar */
-#toolbar-menubar {
-  order: 3 !important;
+/* =================================================================
+   Layout — toolbar ordering (tabs on top)
+   ================================================================= */
+#TabsToolbar {
+  order: 1 !important;
 }
 #nav-bar {
   order: 2 !important;
 }
-#TabsToolbar {
-  order: 1 !important;
+#toolbar-menubar {
+  order: 3 !important;
 }
 
-/* hide bookmarks bar, literally always */
+/* =================================================================
+   Hidden elements
+   ================================================================= */
 #PersonalToolbar {
   display: none !important;
 }
 
-/* remove small border on bottom of toolbox */
+/* =================================================================
+   Navigator toolbox — column layout, no bottom border
+   ================================================================= */
 #navigator-toolbox {
   display: flex !important;
   flex-direction: column !important;
   border-bottom: 0 !important;
 }
 
-/* Extra rules that catch everything in most cases */
+/* =================================================================
+   Background — apply --bg to all chrome areas
+   ================================================================= */
 #TabsToolbar,
 #navigator-toolbox,
 #titlebar,
@@ -50,4 +68,41 @@ toolbar {
 toolbar:window-inactive {
   background-color: inherit !important;
   background: inherit !important;
+}
+
+/* =================================================================
+   Global — icon and button colors
+   Catches toolbar buttons, sidebar buttons, urlbar icons,
+   trust/identity icons, and any chrome <button> with SVG icons.
+   Specific overrides (star, disabled, etc.) live in _nav-bar.css.
+   ================================================================= */
+.toolbarbutton-1,
+.urlbar-icon,
+.identity-box-button,
+#trust-icon-container,
+#sidebar-box button,
+.buttons-wrapper button {
+  fill: var(--blu-4) !important;
+  color: var(--blu-4) !important;
+  -moz-context-properties: fill !important;
+  transition: all var(--ease) !important;
+}
+
+.toolbarbutton-1:hover,
+.toolbarbutton-1:focus,
+.toolbarbutton-1[open="true"],
+.urlbar-icon:hover,
+.identity-box-button:hover,
+#trust-icon-container:hover,
+#sidebar-box button:hover,
+.buttons-wrapper button:hover {
+  fill: var(--orn-4) !important;
+  color: var(--orn-4) !important;
+}
+
+/* remove button background highlights globally */
+.toolbarbutton-1 .toolbarbutton-icon,
+.toolbarbutton-1 .toolbarbutton-badge-stack,
+#reader-mode-button {
+  background: none !important;
 }

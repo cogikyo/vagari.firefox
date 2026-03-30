@@ -1,11 +1,16 @@
-/* ⚰️  cull annoying things ⚰️ */
+/* =================================================================
+   Nav bar — hidden elements
+   ================================================================= */
 .search-one-offs,
 #urlbar-search-mode-indicator-close,
 #urlbar-searchmode-switcher {
   display: none !important;
 }
 
-/* Auto-hide nav bar  */
+/* =================================================================
+   Auto-hide nav bar (disabled)
+   Uncomment to auto-hide the nav bar with a hover reveal.
+   ================================================================= */
 /* #nav-bar {
   box-shadow: none !important;
   margin-top: -40px;
@@ -48,25 +53,11 @@
   transition: opacity var(--ease) 100ms !important;
 } */
 
-#urlbar-input {
-  margin-left: 1rem !important;
-}
+/* =================================================================
+   Toolbar button overrides (beyond global rules)
+   ================================================================= */
 
-#urlbar[breakout][breakout-extend] > #urlbar-input-container {
-  height: var(--urlbar-height) !important;
-  padding-inline: 0 !important;
-  padding-block: 0 !important;
-  padding-left: 6px !important;
-  transition: padding var(--ease) !important;
-}
-
-.toolbarbutton-1,
-#star-button,
-.urlbar-icon {
-  fill: var(--blu-4) !important;
-  transition: all var(--ease) !important;
-}
-
+/* disabled buttons — muted */
 .toolbarbutton-1[disabled] {
   fill: var(--slt-3) !important;
 }
@@ -75,26 +66,17 @@
   fill: var(--slt-0) !important;
 }
 
-.toolbarbutton-1:hover,
-.urlbar-icon:hover,
-.toolbarbutton-1:focus,
-.chromeclass-toolbar-additional:hover,
-.toolbarbutton-1[open="true"] {
-  fill: var(--orn-4) !important;
-}
-
-#reader-mode-button,
-.toolbarbutton-1 .toolbarbutton-icon,
-.toolbarbutton-1 .toolbarbutton-badge-stack {
-  background: none !important;
-}
-
+/* hamburger menu button position tweak */
 #PanelUI-button {
   margin-bottom: -3px !important;
   margin-right: 1px !important;
 }
 
+/* =================================================================
+   URL bar — input styling
+   ================================================================= */
 #urlbar-input {
+  margin-left: 1rem !important;
   color: var(--fg) !important;
   font-family: monospace !important;
   font-size: 0.8em !important;
@@ -105,6 +87,9 @@
   color: var(--orn-4) !important;
 }
 
+/* =================================================================
+   URL bar — background and border
+   ================================================================= */
 #urlbar #urlbar-background {
   background-color: var(--drk-1) !important;
   border: 1px inset var(--slt-1) !important;
@@ -118,11 +103,24 @@
   border: 1px inset var(--slt-1) !important;
 }
 
+/* expanded/breakout state — prevent height jump */
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+  height: var(--urlbar-height) !important;
+  padding-inline: 0 !important;
+  padding-block: 0 !important;
+  padding-left: 6px !important;
+  transition: padding var(--ease) !important;
+}
+
+/* open autocomplete state */
 #urlbar[open="true"] #urlbar-background {
   border-radius: 16px !important;
   border-color: var(--blu-2) !important;
 }
 
+/* =================================================================
+   URL bar — autocomplete results
+   ================================================================= */
 .urlbarView #urlbar-results {
   color: var(--blu-3) !important;
 }
@@ -147,45 +145,35 @@
   color: var(--orn-3) !important;
 }
 
-#star-button:hover,
 .urlbarView-type-icon {
   fill: var(--sun-2) !important;
   transition: all var(--ease) !important;
+}
+
+/* =================================================================
+   Star (bookmark) button
+   ================================================================= */
+#star-button:hover {
+  fill: var(--sun-2) !important;
 }
 
 #star-button-box:hover {
   background: none !important;
 }
 
-#urlbar-zoom-button {
-  background-color: var(--drk-1) !important;
-  color: var(--blu-4) !important;
-  margin-bottom: 4px !important;
-  margin-right: 2px !important;
-  transition: all var(--ease) !important;
+#star-button-box {
+  margin-right: 6px !important;
 }
 
-#urlbar-zoom-button:hover {
-  color: var(--orn-4) !important;
-  transition: all var(--ease) !important;
-  font-weight: 600 !important;
-  font-size: 1.1em !important;
-  margin-bottom: 4px !important;
-}
-
+/* =================================================================
+   Tracking protection / identity icons
+   ================================================================= */
 #tracking-protection-icon,
 #tracking-protection-icon-container,
 .identity-box-button {
   fill: var(--slt-3) !important;
   background: none !important;
   margin-right: -5px !important;
-  transition: all var(--ease) !important;
-}
-
-#tracking-protection-icon:hover,
-.identity-box-button:hover {
-  fill: var(--orn-4) !important;
-  transition: all var(--ease) !important;
 }
 
 #identity-box {
@@ -196,6 +184,19 @@
   margin-left: 6px !important;
 }
 
-#star-button-box {
-  margin-right: 6px !important;
+/* =================================================================
+   Zoom button
+   ================================================================= */
+#urlbar-zoom-button {
+  background-color: var(--drk-1) !important;
+  color: var(--blu-4) !important;
+  margin-bottom: 4px !important;
+  margin-right: 2px !important;
+  transition: all var(--ease) !important;
+}
+
+#urlbar-zoom-button:hover {
+  color: var(--orn-4) !important;
+  font-weight: 600 !important;
+  font-size: 1.1em !important;
 }
