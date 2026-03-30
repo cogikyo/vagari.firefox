@@ -72,3 +72,11 @@
 .sidebar-placesTreechildren::-moz-tree-twisty(container, selected) {
   fill: var(--orn-4) !important;
 }
+
+/* sidebar bottom buttons bar */
+.buttons-wrapper {
+  background: var(--bg) !important;
+  border: none !important;
+  color: var(--blu-2) !important;
+}
+

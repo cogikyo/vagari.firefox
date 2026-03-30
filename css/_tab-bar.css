@@ -1,54 +1,66 @@
-/* ⚰️ cull annoying things ⚰️ */
+/* =============================================
+   Hidden elements
+   ============================================= */
 #new-tab-button,
+#tabs-newtab-button,
 #alltabs-button,
 #scrollbutton-up,
 #scrollbutton-down,
+#sidebar-panel-header,
+#sidebar-tools-and-extensions-splitter,
+#vertical-pinned-tabs-splitter,
 .titlebar-buttonbox-container,
 .titlebar-spacer,
 .tab-close-button,
-.tab-icon-sound-label {
+.tab-icon-image:not([src]) {
   display: none !important;
 }
 
-#tabs-newtab-button {
-  display: none;
+/* =============================================
+   Content area — remove border, rounding, shadow
+   ============================================= */
+.browserStack,
+.browserSidebarContainer,
+#tabbrowser-tabpanels {
+  border: none !important;
+  border-radius: 0 !important;
+  outline: none !important;
 }
 
-#tabbrowser-tabs {
-  margin-bottom: -7px !important;
-  padding: 2px !important;
+.browserContainer {
+  border-radius: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
+/* =============================================
+   Sidebar splitter
+   ============================================= */
+#sidebar-launcher-splitter {
+  background-color: var(--bg) !important;
+}
+
+#sidebar-launcher-splitter:hover {
+  background-color: var(--orn-4) !important;
+}
+
+/* =============================================
+   Tab bar background
+   ============================================= */
 #tabbrowser-tabs,
 #tabbrowser-arrowscrollbox {
-  min-height: var(--tab-min-height) !important;
   background: var(--bg) !important;
 }
-/* ---------------------------------------------- */
 
-#tabbrowser-arrowscrollbox {
-  padding: 1px 1px !important;
-  justify-content: flex-start !important;
-}
+/* =============================================
+   Tab appearance — default, selected, hover
+   ============================================= */
 
-#tabbrowser-tabs {
-  --tab-min-height: 24px !important;
-}
-
-.tab-content {
-  padding: 0px 14px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin-top: -2px;
-  margin-bottom: -3px;
-}
-
+/* default */
 .tabbrowser-tab .tab-background {
   background: var(--bg) !important;
   border: 1px outset var(--blu-1) !important;
   border-radius: 6px !important;
-  margin: 5px 3px !important;
   color: var(--blu-4) !important;
   transition: all var(--ease) !important;
 }
@@ -58,6 +70,7 @@
   transition: color ease-out !important;
 }
 
+/* selected */
 .tabbrowser-tab[selected] .tab-background {
   background: var(--glc-1) !important;
   border-color: var(--orn-4) !important;
@@ -71,6 +84,7 @@
   font-weight: 500;
 }
 
+/* hover */
 .tabbrowser-tab:hover .tab-background {
   background: var(--rst-025) !important;
   border-color: var(--orn-3) !important;
@@ -83,3 +97,64 @@
   font-weight: 600;
   transition: color var(--ease) !important;
 }
+
+/* =============================================
+   Tab group colors — vagari palette overrides
+   Override inline styles directly on tab-group.
+   Uses raw hex because var() doesn't resolve
+   through Firefox's inline style indirection.
+   ============================================= */
+tab-group[color="red"] {
+  --tab-group-color: #f34658 !important; /* rby-0 */
+  --tab-group-color-invert: #222536 !important; /* bg */
+  --tab-group-color-pale: #f07a88 !important; /* rby-2 */
+}
+
+tab-group[color="orange"] {
+  --tab-group-color: #e56b2c !important; /* orn-0 */
+  --tab-group-color-invert: #222536 !important;
+  --tab-group-color-pale: #eb905d !important; /* orn-2 */
+}
+
+tab-group[color="yellow"] {
+  --tab-group-color: #f3a338 !important; /* sun-0 */
+  --tab-group-color-invert: #222536 !important;
+  --tab-group-color-pale: #f5c069 !important; /* sun-2 */
+}
+
+tab-group[color="green"] {
+  --tab-group-color: #5b9542 !important; /* grn-0 */
+  --tab-group-color-invert: #222536 !important;
+  --tab-group-color-pale: #85ba6d !important; /* grn-2 */
+}
+
+tab-group[color="cyan"] {
+  --tab-group-color: #2bb198 !important; /* cyn-0 */
+  --tab-group-color-invert: #222536 !important;
+  --tab-group-color-pale: #38d2ba !important; /* cyn-2 */
+}
+
+tab-group[color="blue"] {
+  --tab-group-color: #369fd7 !important; /* sky-0 */
+  --tab-group-color-invert: #222536 !important;
+  --tab-group-color-pale: #6bbdec !important; /* sky-2 */
+}
+
+tab-group[color="purple"] {
+  --tab-group-color: #7f61cd !important; /* prp-0 */
+  --tab-group-color-invert: #222536 !important;
+  --tab-group-color-pale: #a188df !important; /* prp-2 */
+}
+
+tab-group[color="pink"] {
+  --tab-group-color: #d15da6 !important; /* pnk-0 */
+  --tab-group-color-invert: #222536 !important;
+  --tab-group-color-pale: #ea76c0 !important; /* pnk-2 */
+}
+
+tab-group[color="grey"] {
+  --tab-group-color: #585f8d !important; /* slt-3 */
+  --tab-group-color-invert: #222536 !important;
+  --tab-group-color-pale: #7b7fb0 !important; /* slt-5 */
+}
+
