@@ -65,6 +65,7 @@
 #tabbrowser-tabs[orient="horizontal"] {
   --tab-min-height: 28px !important;
   --tab-block-margin: 0px !important;
+  padding-inline: 4px !important;
 }
 
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {
@@ -132,62 +133,19 @@
   transition: color var(--ease) !important;
 }
 
-/* =============================================
-   Tab group colors — vagari palette overrides
-   Override inline styles directly on tab-group.
-   Uses raw hex because var() doesn't resolve
-   through Firefox's inline style indirection.
-   ============================================= */
-tab-group[color="red"] {
-  --tab-group-color: #f34658 !important; /* rby-0 */
-  --tab-group-color-invert: #222536 !important; /* bg */
-  --tab-group-color-pale: #f29ca9 !important; /* rby-4 */
+.tab-group-label-container {
+  max-height: 28px !important;
 }
 
-tab-group[color="orange"] {
-  --tab-group-color: #e56b2c !important; /* orn-0 */
-  --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #f8b486 !important; /* orn-4 */
+/* Hide the colored line on the group label */
+.tab-group-label-container::after {
+  display: none !important;
 }
 
-tab-group[color="yellow"] {
-  --tab-group-color: #f3a338 !important; /* sun-0 */
-  --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #f5d599 !important; /* sun-4 */
-}
-
-tab-group[color="green"] {
-  --tab-group-color: #5b9542 !important; /* grn-0 */
-  --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #9fd883 !important; /* grn-4 */
-}
-
-tab-group[color="cyan"] {
-  --tab-group-color: #2bb198 !important; /* cyn-0 */
-  --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #75e6d5 !important; /* cyn-4 */
-}
-
-tab-group[color="blue"] {
-  --tab-group-color: #369fd7 !important; /* sky-0 */
-  --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #90d1f5 !important; /* sky-4 */
-}
-
-tab-group[color="purple"] {
-  --tab-group-color: #7f61cd !important; /* prp-0 */
-  --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #bdaaeb !important; /* prp-4 */
-}
-
-tab-group[color="pink"] {
-  --tab-group-color: #d15da6 !important; /* pnk-0 */
-  --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #ed9acd !important; /* pnk-4 */
-}
-
-tab-group[color="grey"] {
-  --tab-group-color: #585f8d !important; /* slt-3 */
-  --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #7b7fb0 !important; /* slt-5 */
+/* Tuck group line to bottom of tab */
+.tab-group-line {
+  bottom: -2px !important;
+  right: -2px !important;
+  height: 1.5px !important;
+  top: unset !important;
 }
