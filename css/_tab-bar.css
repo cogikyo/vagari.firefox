@@ -141,49 +141,49 @@
 tab-group[color="red"] {
   --tab-group-color: #f34658 !important; /* rby-0 */
   --tab-group-color-invert: #222536 !important; /* bg */
-  --tab-group-color-pale: #f07a88 !important; /* rby-2 */
+  --tab-group-color-pale: #f29ca9 !important; /* rby-4 */
 }
 
 tab-group[color="orange"] {
   --tab-group-color: #e56b2c !important; /* orn-0 */
   --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #eb905d !important; /* orn-2 */
+  --tab-group-color-pale: #f8b486 !important; /* orn-4 */
 }
 
 tab-group[color="yellow"] {
   --tab-group-color: #f3a338 !important; /* sun-0 */
   --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #f5c069 !important; /* sun-2 */
+  --tab-group-color-pale: #f5d599 !important; /* sun-4 */
 }
 
 tab-group[color="green"] {
   --tab-group-color: #5b9542 !important; /* grn-0 */
   --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #85ba6d !important; /* grn-2 */
+  --tab-group-color-pale: #9fd883 !important; /* grn-4 */
 }
 
 tab-group[color="cyan"] {
   --tab-group-color: #2bb198 !important; /* cyn-0 */
   --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #38d2ba !important; /* cyn-2 */
+  --tab-group-color-pale: #75e6d5 !important; /* cyn-4 */
 }
 
 tab-group[color="blue"] {
   --tab-group-color: #369fd7 !important; /* sky-0 */
   --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #6bbdec !important; /* sky-2 */
+  --tab-group-color-pale: #90d1f5 !important; /* sky-4 */
 }
 
 tab-group[color="purple"] {
   --tab-group-color: #7f61cd !important; /* prp-0 */
   --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #a188df !important; /* prp-2 */
+  --tab-group-color-pale: #bdaaeb !important; /* prp-4 */
 }
 
 tab-group[color="pink"] {
   --tab-group-color: #d15da6 !important; /* pnk-0 */
   --tab-group-color-invert: #222536 !important;
-  --tab-group-color-pale: #ea76c0 !important; /* pnk-2 */
+  --tab-group-color-pale: #ed9acd !important; /* pnk-4 */
 }
 
 tab-group[color="grey"] {
