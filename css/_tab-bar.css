@@ -9,6 +9,7 @@
 #sidebar-panel-header,
 #sidebar-tools-and-extensions-splitter,
 #vertical-pinned-tabs-splitter,
+.tab-group-overflow-count-container,
 .titlebar-buttonbox-container,
 .titlebar-spacer,
 .tab-close-button,
@@ -73,17 +74,16 @@
   margin-inline: 2px !important;
 }
 
+#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab[pinned] {
+  min-width: 42px !important;
+}
+
 #tabbrowser-tabs[orient="horizontal"] .tab-background {
   min-height: unset !important;
 }
 
 #tabbrowser-tabs[orient="horizontal"] .tab-content {
   padding-block: 0 !important;
-}
-
-#tabbrowser-tabs[orient="horizontal"] #tabbrowser-arrowscrollbox,
-#tabbrowser-tabs[orient="horizontal"] #pinned-tabs-container {
-  padding-block: 2px !important;
 }
 
 /* =============================================
