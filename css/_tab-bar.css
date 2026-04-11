@@ -59,7 +59,11 @@
    ============================================= */
 #TabsToolbar {
   margin-bottom: -14px !important;
-  margin-top: 5px !important;
+  margin-top: 8px !important;
+}
+
+#TabsToolbar:has([movingtab]) {
+  margin-bottom: 1px !important;
 }
 
 #tabbrowser-tabs[orient="horizontal"] {
