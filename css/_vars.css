@@ -179,6 +179,35 @@
   --gry-4: #6d7089;
   --gry-5: #7f8199;
 
+  /* --- Firefox tab groups --- */
+  --tab-group-color-blue: var(--blu-3);
+  --tab-group-color-blue-invert: var(--blu-4);
+  --tab-group-color-blue-pale: var(--blu-1);
+  --tab-group-color-purple: var(--prp-3);
+  --tab-group-color-purple-invert: var(--prp-4);
+  --tab-group-color-purple-pale: var(--prp-1);
+  --tab-group-color-cyan: var(--cyn-3);
+  --tab-group-color-cyan-invert: var(--cyn-4);
+  --tab-group-color-cyan-pale: var(--cyn-1);
+  --tab-group-color-orange: var(--orn-3);
+  --tab-group-color-orange-invert: var(--orn-4);
+  --tab-group-color-orange-pale: var(--orn-1);
+  --tab-group-color-yellow: var(--sun-3);
+  --tab-group-color-yellow-invert: var(--sun-4);
+  --tab-group-color-yellow-pale: var(--sun-1);
+  --tab-group-color-pink: var(--pnk-3);
+  --tab-group-color-pink-invert: var(--pnk-4);
+  --tab-group-color-pink-pale: var(--pnk-1);
+  --tab-group-color-green: var(--grn-3);
+  --tab-group-color-green-invert: var(--grn-4);
+  --tab-group-color-green-pale: var(--grn-1);
+  --tab-group-color-red: var(--rby-3);
+  --tab-group-color-red-invert: var(--rby-4);
+  --tab-group-color-red-pale: var(--rby-1);
+  --tab-group-color-gray: var(--gry-3);
+  --tab-group-color-gray-invert: var(--gry-4);
+  --tab-group-color-gray-pale: var(--gry-1);
+
   /* --- utility --- */
   --ease: 200ms ease-in-out;
 

@@ -148,15 +148,176 @@
   max-height: 28px !important;
 }
 
-/* Hide the colored line on the group label */
-.tab-group-label-container::after {
-  display: none !important;
+/* Tab groups inherit these variables from Firefox's tab-group element. */
+tab-group {
+  --vagari-tab-group-transition: 140ms ease-out;
+  --vagari-tab-group-accent: var(--tab-group-color-invert);
+  --vagari-tab-group-deep: var(--tab-group-color-pale);
+  --vagari-tab-group-bg: color-mix(
+    in srgb,
+    var(--vagari-tab-group-accent) 8%,
+    var(--bg)
+  );
+  --vagari-tab-group-bg-hover: var(--vagari-tab-group-bg);
+  --vagari-tab-group-bg-selected: var(--vagari-tab-group-bg);
+  --vagari-tab-group-label-collapsed-bg: var(--tab-group-color);
+  --vagari-tab-group-label-collapsed-height: calc(
+    var(--tab-group-label-height) - 4px
+  );
+  --vagari-tab-group-label-expanded-bg: var(--tab-group-color);
+  --vagari-tab-group-label-expanded-border: var(--tab-group-color);
+  --vagari-tab-group-label-expanded-padding-inline: calc(
+    var(--tab-group-label-padding) + 2px
+  );
+  --vagari-tab-group-selected-text: var(--vagari-tab-group-deep);
+  --vagari-tab-group-border: color-mix(
+    in srgb,
+    var(--vagari-tab-group-accent) 72%,
+    var(--bg)
+  );
+  --vagari-tab-group-text: color-mix(
+    in srgb,
+    var(--vagari-tab-group-accent) 50%,
+    var(--fg)
+  );
 }
 
-/* Tuck group line to bottom of tab */
+tab-group .tabbrowser-tab .tab-background {
+  background: var(--vagari-tab-group-bg) !important;
+  border-color: var(--vagari-tab-group-border) !important;
+  box-shadow: none !important;
+  transition:
+    background var(--vagari-tab-group-transition),
+    border-color var(--vagari-tab-group-transition),
+    box-shadow var(--vagari-tab-group-transition) !important;
+}
+
+tab-group .tabbrowser-tab .tab-stack {
+  color: var(--vagari-tab-group-text) !important;
+  transition: color var(--vagari-tab-group-transition) !important;
+}
+
+tab-group .tabbrowser-tab:hover .tab-background {
+  background: var(--vagari-tab-group-bg-hover) !important;
+  border-color: var(--vagari-tab-group-accent) !important;
+  box-shadow: none !important;
+}
+
+tab-group .tabbrowser-tab:hover .tab-stack,
+tab-group .tabbrowser-tab:is([selected], [visuallyselected]) .tab-stack {
+  color: var(--vagari-tab-group-accent) !important;
+}
+
+tab-group .tabbrowser-tab:is([selected], [visuallyselected]) .tab-background,
+tab-group .tabbrowser-tab .tab-background[selected] {
+  background: var(--vagari-tab-group-bg-selected) !important;
+  border-color: var(--vagari-tab-group-selected-text) !important;
+  box-shadow: none !important;
+}
+
+tab-group .tabbrowser-tab:is([selected], [visuallyselected]) .tab-stack,
+tab-group .tabbrowser-tab:has(.tab-background[selected]) .tab-stack {
+  color: var(--vagari-tab-group-selected-text) !important;
+}
+
+tab-group > .tab-group-label-container .tab-group-label,
+tab-group[collapsed] > .tab-group-label-container .tab-group-label {
+  color: var(--drk-3) !important;
+  outline-offset: -1px !important;
+  transition:
+    background-color var(--vagari-tab-group-transition),
+    border-radius var(--vagari-tab-group-transition),
+    color var(--vagari-tab-group-transition),
+    line-height var(--vagari-tab-group-transition),
+    min-height var(--vagari-tab-group-transition),
+    outline-color var(--vagari-tab-group-transition),
+    padding var(--vagari-tab-group-transition) !important;
+}
+
+tab-group:not([collapsed]) > .tab-group-label-container .tab-group-label {
+  background-color: var(--vagari-tab-group-label-expanded-bg) !important;
+  border-radius: 3px !important;
+  color: var(--drk-3) !important;
+  padding-block: 1px !important;
+  padding-inline: var(
+    --vagari-tab-group-label-expanded-padding-inline
+  ) !important;
+  outline: 1px solid var(--vagari-tab-group-label-expanded-border) !important;
+}
+
+tab-group[collapsed] > .tab-group-label-container .tab-group-label {
+  background-color: var(--vagari-tab-group-label-collapsed-bg) !important;
+  border-radius: calc(var(--tab-border-radius) - 1px) !important;
+  color: var(--drk-3) !important;
+  line-height: var(--vagari-tab-group-label-collapsed-height) !important;
+  min-height: var(--vagari-tab-group-label-collapsed-height) !important;
+  outline: 1px solid var(--tab-group-color-invert) !important;
+  padding-block: 0 !important;
+}
+
+tab-group[style*="--tab-group-color-blue"] {
+  --vagari-tab-group-label-collapsed-bg: var(--blu-2);
+  --vagari-tab-group-label-expanded-bg: var(--blu-4);
+  --vagari-tab-group-label-expanded-border: var(--blu-4);
+}
+
+tab-group[style*="--tab-group-color-purple"] {
+  --vagari-tab-group-label-collapsed-bg: var(--prp-2);
+  --vagari-tab-group-label-expanded-bg: var(--prp-4);
+  --vagari-tab-group-label-expanded-border: var(--prp-4);
+}
+
+tab-group[style*="--tab-group-color-cyan"] {
+  --vagari-tab-group-label-collapsed-bg: var(--cyn-2);
+  --vagari-tab-group-label-expanded-bg: var(--cyn-4);
+  --vagari-tab-group-label-expanded-border: var(--cyn-4);
+}
+
+tab-group[style*="--tab-group-color-orange"] {
+  --vagari-tab-group-label-collapsed-bg: var(--orn-2);
+  --vagari-tab-group-label-expanded-bg: var(--orn-4);
+  --vagari-tab-group-label-expanded-border: var(--orn-4);
+}
+
+tab-group[style*="--tab-group-color-yellow"] {
+  --vagari-tab-group-label-collapsed-bg: var(--sun-2);
+  --vagari-tab-group-label-expanded-bg: var(--sun-4);
+  --vagari-tab-group-label-expanded-border: var(--sun-4);
+}
+
+tab-group[style*="--tab-group-color-pink"] {
+  --vagari-tab-group-label-collapsed-bg: var(--pnk-2);
+  --vagari-tab-group-label-expanded-bg: var(--pnk-4);
+  --vagari-tab-group-label-expanded-border: var(--pnk-4);
+}
+
+tab-group[style*="--tab-group-color-green"] {
+  --vagari-tab-group-label-collapsed-bg: var(--grn-2);
+  --vagari-tab-group-label-expanded-bg: var(--grn-4);
+  --vagari-tab-group-label-expanded-border: var(--grn-4);
+}
+
+tab-group[style*="--tab-group-color-red"] {
+  --vagari-tab-group-label-collapsed-bg: var(--rby-2);
+  --vagari-tab-group-label-expanded-bg: var(--rby-4);
+  --vagari-tab-group-label-expanded-border: var(--rby-4);
+}
+
+tab-group[style*="--tab-group-color-gray"] {
+  --vagari-tab-group-label-collapsed-bg: var(--gry-2);
+  --vagari-tab-group-label-expanded-bg: var(--gry-4);
+  --vagari-tab-group-label-expanded-border: var(--gry-4);
+}
+
+tab-group[collapsed]:not([movingtabgroup])
+  .tab-group-label-hover-highlight:hover,
+tab-group[previewpanelactive] .tab-group-label-hover-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.tab-group-label-container::after,
+.tab-group-overflow-count-container::after,
 .tab-group-line {
-  bottom: -2px !important;
-  right: -2px !important;
-  height: 1.5px !important;
-  top: unset !important;
+  display: none !important;
 }
