@@ -5,28 +5,174 @@
 @import "_vars.css";
 @import "_dev-tools.css";
 
+@namespace html url("http://www.w3.org/1999/xhtml");
+
 /* =================================================================
    about: pages — apply vagari background
    ================================================================= */
 @-moz-document url-prefix(about:) {
-  * {
-    background-color: transparent !important;
-  }
-
   html,
   body {
-    background-color: var(--bg) !important;
-    color: var(--fg) !important;
+    background-color: var(--page-bg) !important;
+    color: var(--page-fg) !important;
+  }
+
+  :root {
+    --background-color-canvas: var(--page-bg) !important;
+    --background-color-box: var(--drk-0) !important;
+    --background-color-overlay: var(--glc-1) !important;
+    --background-color-list-item-hover: var(--glc-2) !important;
+    --border-color: var(--page-border) !important;
+    --border-color-interactive: var(--page-accent) !important;
+    --border-color-selected: var(--page-accent) !important;
+    --color-accent-primary: var(--page-accent) !important;
+    --color-accent-primary-active: var(--page-accent-hover) !important;
+    --color-accent-primary-hover: var(--page-accent-hover) !important;
+    --color-accent-primary-selected: var(--page-selection-bg) !important;
+    --focus-outline-color: var(--cyn-1) !important;
+    --link-color: var(--cyn-1) !important;
+    --link-color-active: var(--page-accent-hover) !important;
+    --link-color-hover: var(--page-accent-hover) !important;
+    --link-color-visited: var(--prp-3) !important;
+    --text-color: var(--page-fg) !important;
+    --text-color-accent-primary-selected: var(--page-selection-fg) !important;
+    --text-color-deemphasized: var(--page-muted-fg) !important;
+    --button-background-color: var(--page-button-bg) !important;
+    --button-background-color-active: var(--page-button-bg-active) !important;
+    --button-background-color-hover: var(--page-button-bg-hover) !important;
+    --button-background-color-primary: var(--blu-2) !important;
+    --button-background-color-primary-active: var(--blu-4) !important;
+    --button-background-color-primary-hover: var(--blu-3) !important;
+    --button-border-color: var(--page-border) !important;
+    --button-border-color-active: var(--page-accent-hover) !important;
+    --button-border-color-hover: var(--page-accent) !important;
+    --button-border-color-primary: var(--blu-3) !important;
+    --button-border-color-primary-active: var(--blu-4) !important;
+    --button-border-color-primary-hover: var(--blu-4) !important;
+    --button-text-color: var(--page-fg) !important;
+    --button-text-color-active: var(--wht-3) !important;
+    --button-text-color-hover: var(--wht-3) !important;
+    --button-text-color-primary: var(--drk-3) !important;
+    --button-text-color-primary-active: var(--drk-3) !important;
+    --button-text-color-primary-hover: var(--drk-3) !important;
+    --in-content-page-background: var(--page-bg) !important;
+    --in-content-page-color: var(--page-fg) !important;
+    --in-content-text-color: var(--page-fg) !important;
+    --in-content-deemphasized-text: var(--page-muted-fg) !important;
+    --in-content-box-background: var(--drk-0) !important;
+    --in-content-box-border-color: var(--page-border) !important;
+    --in-content-border-color: var(--page-border) !important;
+    --in-content-link-color: var(--page-accent) !important;
+    --in-content-link-color-hover: var(--page-accent-hover) !important;
+    --in-content-button-background: var(--page-button-bg) !important;
+    --in-content-button-background-hover: var(
+      --page-button-bg-hover
+    ) !important;
+    --in-content-button-text-color: var(--page-fg) !important;
+    --in-content-primary-button-background: var(--blu-1) !important;
+    --in-content-primary-button-background-hover: var(--blu-2) !important;
+    --in-content-primary-button-text-color: var(--drk-3) !important;
+  }
+
+  ::selection {
+    background-color: var(--page-selection-bg) !important;
+    color: var(--page-selection-fg) !important;
   }
 
   /* search bar in about:preferences */
   .sticky-container {
-    background-color: var(--bg) !important;
+    background-color: var(--page-bg) !important;
     margin-bottom: 20px !important;
   }
 
   .sticky-inner-container {
     margin-bottom: -20px !important;
+  }
+}
+
+/* =================================================================
+   Preferences — search indicators and in-content controls
+   ================================================================= */
+@-moz-document url-prefix(about:preferences) {
+  #search-container,
+  #mainPrefPane,
+  groupbox,
+  groupbox[data-category],
+  .subcategory,
+  .search-header {
+    background-color: var(--page-bg) !important;
+    color: var(--page-fg) !important;
+  }
+
+  .info-box-container,
+  .extension-controlled-disabled,
+  .content-blocking-category,
+  .sidebar-footer-list,
+  #defaultBrowserBox,
+  #browserContainersbox,
+  #colors,
+  #fontsGroup {
+    background-color: var(--drk-0) !important;
+    border-color: var(--page-border) !important;
+    color: var(--page-fg) !important;
+  }
+
+  #searchInput,
+  input,
+  textarea,
+  select,
+  menulist {
+    background-color: var(--drk-0) !important;
+    border-color: var(--page-border) !important;
+    color: var(--page-fg) !important;
+  }
+
+  #searchInput:focus,
+  input:focus,
+  textarea:focus,
+  select:focus,
+  menulist:focus-visible {
+    border-color: var(--cyn-1) !important;
+    outline-color: var(--cyn-1) !important;
+  }
+
+  button,
+  button[disabled],
+  html|button,
+  html|button:disabled {
+    background-color: var(--page-button-bg) !important;
+    border-color: var(--page-border) !important;
+    color: var(--page-fg) !important;
+  }
+
+  button:not([disabled]):hover,
+  html|button:enabled:hover {
+    background-color: var(--page-button-bg-hover) !important;
+    border-color: var(--page-accent) !important;
+    color: var(--wht-3) !important;
+  }
+
+  button[disabled],
+  html|button:disabled,
+  label[disabled],
+  .text-link[disabled] {
+    color: var(--gry-5) !important;
+    opacity: 0.65 !important;
+  }
+
+  .search-tooltip {
+    background-color: var(--page-search-bg) !important;
+    border-color: var(--page-accent) !important;
+    color: var(--page-search-fg) !important;
+    opacity: 0.95 !important;
+  }
+
+  .search-tooltip::before {
+    border-top-color: var(--page-accent) !important;
+  }
+
+  .search-tooltip::after {
+    border-top-color: var(--page-search-bg) !important;
   }
 }
 

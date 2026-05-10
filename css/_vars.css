@@ -181,4 +181,19 @@
 
   /* --- utility --- */
   --ease: 200ms ease-in-out;
+
+  /* --- content pages --- */
+  --page-bg: var(--bg);
+  --page-fg: var(--fg);
+  --page-muted-fg: var(--brt-1);
+  --page-accent: var(--blu-3);
+  --page-accent-hover: var(--orn-3);
+  --page-border: var(--slt-2);
+  --page-button-bg: var(--glc-2);
+  --page-button-bg-hover: var(--glc-3);
+  --page-button-bg-active: var(--glc-4);
+  --page-selection-bg: var(--glc-4);
+  --page-selection-fg: var(--wht-3);
+  --page-search-bg: var(--glc-3);
+  --page-search-fg: var(--wht-3);
 }
