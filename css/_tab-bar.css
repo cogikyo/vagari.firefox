@@ -83,6 +83,13 @@
   min-width: 42px !important;
 }
 
+#tabbrowser-tabs[orient="horizontal"]
+  tab-group[collapsed]
+  > .tabbrowser-tab[aria-hidden="true"] {
+  margin-inline: 0 !important;
+  padding-inline: 0 !important;
+}
+
 #tabbrowser-tabs[orient="horizontal"] .tab-background {
   min-height: unset !important;
 }

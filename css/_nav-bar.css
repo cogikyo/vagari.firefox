@@ -57,6 +57,11 @@
    Toolbar button overrides (beyond global rules)
    ================================================================= */
 
+#nav-bar {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
 /* disabled buttons — muted */
 .toolbarbutton-1[disabled] {
   fill: var(--slt-3) !important;
