@@ -155,11 +155,10 @@ tab-group {
   --vagari-tab-group-deep: var(--tab-group-color-pale);
   --vagari-tab-group-bg: color-mix(
     in srgb,
-    var(--vagari-tab-group-accent) 8%,
+    var(--vagari-tab-group-accent) 2%,
     var(--bg)
   );
   --vagari-tab-group-bg-hover: var(--vagari-tab-group-bg);
-  --vagari-tab-group-bg-selected: var(--vagari-tab-group-bg);
   --vagari-tab-group-label-collapsed-bg: var(--tab-group-color);
   --vagari-tab-group-label-collapsed-height: calc(
     var(--tab-group-label-height) - 4px
@@ -179,6 +178,11 @@ tab-group {
     in srgb,
     var(--vagari-tab-group-accent) 50%,
     var(--fg)
+  );
+  --vagari-tab-group-bg-selected: color-mix(
+    in srgb,
+    var(--vagari-tab-group-accent) 20%,
+    var(--bg)
   );
 }
 
