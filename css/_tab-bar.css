@@ -158,7 +158,13 @@ tab-group {
     var(--vagari-tab-group-accent) 2%,
     var(--bg)
   );
-  --vagari-tab-group-bg-hover: var(--vagari-tab-group-bg);
+  --vagari-tab-group-bg-hover: color-mix(
+    in srgb,
+    var(--vagari-tab-group-invert) 8%,
+    var(--bg)
+  );
+  --vagari-tab-group-label-expanded-hover-bg: var(--tab-group-color-invert);
+  --vagari-tab-group-label-hover-bg: var(--vagari-tab-group-deep);
   --vagari-tab-group-label-collapsed-bg: var(--tab-group-color);
   --vagari-tab-group-label-collapsed-height: calc(
     var(--tab-group-label-height) - 4px
@@ -235,7 +241,9 @@ tab-group[collapsed] > .tab-group-label-container .tab-group-label {
     line-height var(--vagari-tab-group-transition),
     min-height var(--vagari-tab-group-transition),
     outline-color var(--vagari-tab-group-transition),
-    padding var(--vagari-tab-group-transition) !important;
+    padding var(--vagari-tab-group-transition),
+    transform var(--vagari-tab-group-transition) !important;
+  transform-origin: center !important;
 }
 
 tab-group:not([collapsed]) > .tab-group-label-container .tab-group-label {
@@ -257,6 +265,22 @@ tab-group[collapsed] > .tab-group-label-container .tab-group-label {
   min-height: var(--vagari-tab-group-label-collapsed-height) !important;
   outline: 1px solid var(--tab-group-color-invert) !important;
   padding-block: 0 !important;
+}
+
+tab-group[collapsed] > .tab-group-label-container:hover .tab-group-label,
+tab-group[collapsed] .tab-group-label-hover-highlight:hover .tab-group-label {
+  background-color: var(--vagari-tab-group-label-hover-bg) !important;
+  outline-color: var(--vagari-tab-group-label-hover-bg) !important;
+  padding-block: 2px !important;
+}
+
+tab-group:not([collapsed]) > .tab-group-label-container:hover .tab-group-label,
+tab-group:not([collapsed])
+  .tab-group-label-hover-highlight:hover
+  .tab-group-label {
+  background-color: var(--vagari-tab-group-label-expanded-hover-bg) !important;
+  outline-color: var(--vagari-tab-group-label-expanded-hover-bg) !important;
+  padding-block: 1px !important;
 }
 
 tab-group[style*="--tab-group-color-blue"] {
@@ -311,6 +335,7 @@ tab-group[style*="--tab-group-color-gray"] {
   --vagari-tab-group-label-collapsed-bg: var(--gry-2);
   --vagari-tab-group-label-expanded-bg: var(--gry-4);
   --vagari-tab-group-label-expanded-border: var(--gry-4);
+  --vagari-tab-group-label-hover-bg: var(--gry-5);
 }
 
 tab-group[collapsed]:not([movingtabgroup])
