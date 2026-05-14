@@ -2,9 +2,18 @@
    Nav bar — hidden elements
    ================================================================= */
 .search-one-offs,
-#urlbar-search-mode-indicator-close,
-#urlbar-searchmode-switcher {
+#search-container,
+#searchbar,
+#searchbar-new,
+#urlbar .searchmode-switcher,
+.searchmode-switcher-panel,
+#urlbar-search-button,
+#urlbar-searchmode-switcher,
+#searchmode-switcher-popup,
+#searchmode-switcher-chicklet,
+#urlbar-search-mode-indicator-close {
   display: none !important;
+  visibility: collapse !important;
 }
 
 /* =================================================================
@@ -81,7 +90,7 @@
    URL bar — input styling
    ================================================================= */
 #urlbar-input {
-  margin-left: 1rem !important;
+  margin-left: 0 !important;
   color: var(--fg) !important;
   font-family: monospace !important;
   font-size: 0.8em !important;
@@ -109,7 +118,7 @@
 }
 
 /* expanded/breakout state — prevent height jump */
-#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+#urlbar[breakout][breakout-extend] > .urlbar-input-container {
   height: var(--urlbar-height) !important;
   padding-inline: 0 !important;
   padding-block: 0 !important;
@@ -187,6 +196,44 @@
 
 #tracking-protection-icon-container {
   margin-left: 6px !important;
+}
+
+#trust-icon-container {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  margin-inline: 8px 4px !important;
+  min-height: auto !important;
+  padding-inline: 0 !important;
+}
+
+#trust-icon-container.insecure {
+  background: none !important;
+}
+
+#trust-icon-container.insecure #trust-icon {
+  height: 16px !important;
+  width: 16px !important;
+}
+
+#trust-icon-container.insecure #trust-label {
+  display: none !important;
+}
+
+#identity-box[pageproxystate="valid"]:is(.notSecure, .notSecureText) {
+  margin-right: 4px !important;
+}
+
+#identity-box[pageproxystate="valid"]:is(.notSecure, .notSecureText) > .identity-box-button {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  margin-right: 0 !important;
+  padding-inline: 0 !important;
+}
+
+#identity-box[pageproxystate="valid"]:is(.notSecure, .notSecureText) #identity-icon-label {
+  display: none !important;
 }
 
 /* =================================================================
